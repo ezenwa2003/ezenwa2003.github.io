@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ezenwa Alphonsus Anayo | Markets. Technology. Possibilities.</title>
+<meta name="description" content="Ezenwa is a futures trader, Web3 enthusiast and builder working at the intersection of financial markets and emerging technology.">
+<meta name="theme-color" content="#08090a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308090a'/%3E%3Cpath d='M9 8h14v3H12.5v4H21v3h-8.5v4H23v3H9z' fill='%233dff8a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08090a;--bg2:#0f1113;--ink:#ecece8;--mute:#8b8f94;--line:rgba(255,255,255,.09);--acc:#3dff8a;--serif:'Instrument Serif',Georgia,'Times New Roman',serif;--sans:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;--ease:cubic-bezier(.2,.7,.1,1);color-scheme:dark;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;background:var(--bg)}
+body{background:var(--bg);color:var(--ink);font:300 1.0625rem/1.6 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+body::after{content:"";position:fixed;inset:-50%;z-index:70;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:gr 1.2s steps(6) infinite}
+@keyframes gr{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{width:min(1200px,100% - 3rem);margin-inline:auto}
+.mono{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.mono b{color:var(--acc);font-weight:400}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1}
+/* loader */
+#ld{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;transition:transform 1s var(--ease)}
+#ld span{font-family:var(--serif);font-size:clamp(2rem,6vw,3.5rem);display:block;overflow:hidden}
+#ld i{display:block;height:1px;background:var(--acc);width:0;margin-top:1rem;animation:ln 1.1s var(--ease) forwards}
+@keyframes ln{to{width:100%}}
+body.ready #ld{transform:translateY(-100%)}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(1.1rem + env(safe-area-inset-top,0px)) 0 1.1rem;mix-blend-mode:normal}
+header .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:var(--serif);font-size:1.5rem}
+nav{display:flex;gap:2rem}
+nav a,.mbtn{position:relative;font:400 .8rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding:.7rem 0;transition:color .3s}
+nav a::after{content:"";position:absolute;left:0;bottom:.3rem;height:1px;width:100%;background:var(--acc);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+nav a:hover,nav a.on{color:var(--ink)}
+nav a:hover::after,nav a.on::after{transform:scaleX(1);transform-origin:left}
+.mbtn{display:none;background:none;border:1px solid var(--line);border-radius:2px;min-width:44px;min-height:44px;padding:0 1rem;cursor:pointer}
+/* hero */
+#top{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:8rem 0 4rem;overflow:hidden}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+#top::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 100%,var(--bg) 10%,transparent 65%),linear-gradient(var(--bg),transparent 25%);pointer-events:none}
+#top .wrap{position:relative;z-index:2}
+h1{font-size:clamp(3.2rem,11vw,9.5rem);letter-spacing:-.02em;margin:1.5rem 0 2rem}
+h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+h1 .ln span{display:block;transform:translateY(110%);transition:transform 1.2s var(--ease)}
+h1 .ln:nth-child(2) span{transition-delay:.12s;font-style:italic;color:var(--acc)}
+h1 .ln:nth-child(3) span{transition-delay:.24s}
+body.ready h1 .ln span{transform:none}
+.sub{max-width:34rem;font-size:clamp(1.05rem,2vw,1.3rem);color:#c4c6c8}
+.cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.5rem}
+.btn{display:inline-flex;align-items:center;gap:.7rem;min-height:48px;padding:0 1.6rem;border:1px solid var(--line);border-radius:2px;font:400 .8rem var(--mono);letter-spacing:.12em;text-transform:uppercase;transition:background .4s,color .4s,border-color .4s,transform .4s var(--ease)}
+.btn svg{width:14px;height:14px;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn.p{background:var(--acc);color:#04100a;border-color:var(--acc)}
+.btn.p:hover{background:var(--ink);border-color:var(--ink)}
+.btn:not(.p):hover{border-color:var(--acc);color:var(--acc)}
+.scroll{position:absolute;right:1.5rem;bottom:4rem;z-index:2;writing-mode:vertical-rl}
+/* sections */
+section{padding:clamp(5rem,12vw,10rem) 0;position:relative}
+.hd{display:flex;gap:1.5rem;align-items:baseline;margin-bottom:3.5rem}
+.hd::after{content:"";flex:1;height:1px;background:var(--line);transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease)}
+.hd.in::after{transform:none}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+#about .g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}
+#about h2{font-size:clamp(2.2rem,5vw,4.2rem);letter-spacing:-.01em}
+#about h2 em{color:var(--acc)}
+#about p+p{margin-top:1.4rem}
+#about p{color:#c4c6c8}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.tag{font:400 .72rem var(--mono);letter-spacing:.08em;padding:.35rem .7rem;border:1px solid var(--line);border-radius:2px;color:var(--mute)}
+/* what i do */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{position:relative;background:var(--bg);padding:2rem;min-height:30rem;display:flex;flex-direction:column;overflow:hidden;transition:background .5s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(61,255,138,.09),transparent 60%);opacity:0;transition:opacity .4s}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card h3{font-size:2.4rem;margin:auto 0 .8rem}
+.card p{color:var(--mute);font-size:.98rem}
+.card .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.viz{height:150px;margin-bottom:2rem}
+.viz svg{width:100%;height:100%;overflow:visible}
+.cn{stroke:var(--mute);stroke-width:1;transition:stroke .5s,transform .7s var(--ease);transform-box:fill-box;transform-origin:center}
+.cn.u{fill:var(--acc);stroke:var(--acc)}
+.card:hover .cn{stroke:var(--acc)}
+.card:hover .cn:nth-child(odd){transform:scaleY(1.25)}
+.card:hover .cn:nth-child(even){transform:scaleY(.8)}
+.nd{fill:var(--bg);stroke:var(--mute);stroke-width:1.2;transition:stroke .5s,fill .5s}
+.ed{stroke:var(--line);stroke-width:1;stroke-dasharray:3 4;transition:stroke .5s}
+.card:hover .nd{stroke:var(--acc)}.card:hover .nd.f{fill:var(--acc)}.card:hover .ed{stroke:var(--acc);animation:dash 1.5s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-14}}
+.code{font:400 .8rem/1.9 var(--mono);color:var(--mute);white-space:pre;overflow:hidden}
+.code .k{color:var(--acc)}.code .c{color:#5b6065}
+/* lab */
+.lab{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pj{border:1px solid var(--line);background:var(--bg2);border-radius:2px;display:flex;flex-direction:column;transition:border-color .5s,transform .6s var(--ease)}
+.pj:hover{border-color:rgba(61,255,138,.5);transform:translateY(-6px)}
+.th{aspect-ratio:16/10;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:repeating-linear-gradient(90deg,transparent 0 39px,var(--line) 39px 40px),repeating-linear-gradient(0deg,transparent 0 39px,var(--line) 39px 40px)}
+.th svg{position:absolute;inset:0;width:100%;height:100%}
+.th .st{position:absolute;left:1rem;top:1rem;color:var(--acc)}
+.pb{padding:1.5rem;display:flex;flex-direction:column;gap:.9rem;flex:1}
+.pb h3{font-size:1.9rem}
+.pb p{color:var(--mute);font-size:.95rem}
+.pb .tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.pa{display:flex;gap:.8rem;margin-top:auto;padding-top:.8rem}
+.pa .btn{min-height:44px;padding:0 1.1rem;font-size:.72rem}
+.btn[aria-disabled=true]{opacity:.5;pointer-events:none}
+.note{margin-top:2.5rem;max-width:36rem;color:var(--mute);font-size:.95rem}
+/* contact */
+#contact{text-align:center;border-top:1px solid var(--line)}
+#contact h2{font-size:clamp(2.6rem,9vw,7.5rem);letter-spacing:-.02em;margin:1.5rem 0 2.5rem}
+#contact h2 em{color:var(--acc)}
+.mail{display:inline-block;font:400 clamp(1rem,3.4vw,1.9rem) var(--mono);border-bottom:1px solid var(--acc);padding:.4rem 0;transition:color .3s}
+.mail:hover{color:var(--acc)}
+.cta.c{justify-content:center}
+footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+/* cursor */
+.cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid var(--acc);border-radius:50%;z-index:80;pointer-events:none;opacity:0;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .3s,opacity .3s}
+.cur.on{opacity:.9}.cur.h{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(61,255,138,.1)}
+@media(max-width:900px){
+ #about .g,.cards,.lab{grid-template-columns:1fr}
+ .card{min-height:24rem}
+ nav{position:fixed;inset:0;background:var(--bg);flex-direction:column;justify-content:center;align-items:center;gap:1.2rem;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+ nav a{font:400 2.4rem var(--serif);text-transform:none;letter-spacing:0;color:var(--ink)}
+ nav.open{opacity:1;visibility:visible}
+ .mbtn{display:block;position:relative;z-index:2}
+ .scroll{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+ .rv,h1 .ln span{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="ld" aria-hidden="true"><div><span>Ezenwa</span><i></i></div></div>
+<div class="cur" aria-hidden="true"></div>
+
+<header>
+ <div class="wrap">
+  <a class="logo" href="#top" aria-label="Ezenwa, back to top">Ezenwa</a>
+  <button class="mbtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Primary">
+   <a href="#about">About</a><a href="#do">Disciplines</a><a href="#lab">Digital Lab</a><a href="#contact">Contact</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section id="top" aria-label="Introduction">
+ <canvas id="cv" aria-hidden="true"></canvas>
+ <div class="wrap">
+  <p class="mono"><b>●</b>&nbsp; Ezenwa Alphonsus Anayo</p>
+  <h1 aria-label="Markets. Technology. Possibilities."><span class="ln"><span>Markets.</span></span><span class="ln"><span>Technology.</span></span><span class="ln"><span>Possibilities.</span></span></h1>
+  <p class="sub">I’m Ezenwa, a trader, Web3 enthusiast and builder exploring the intersection of financial markets and emerging technology.</p>
+  <div class="cta">
+   <a class="btn p" href="#lab">Explore my work <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5"/></svg></a>
+   <a class="btn" href="#contact">Contact me</a>
+  </div>
+ </div>
+ <span class="mono scroll">Scroll</span>
+</section>
+
+<section id="about">
+ <div class="wrap">
+  <div class="hd rv"><span class="mono"><b>01</b> &nbsp;About</span></div>
+  <div class="g">
+   <h2 class="rv">Markets taught me to read <em>structure</em>. Software taught me to build on it.</h2>
+   <div class="rv" style="--d:.15s">
+    <p>I started with markets. Trading NASDAQ futures for three to four years has been a lesson in liquidity, positioning and how much I can lose before I’m wrong. The idea comes second. Risk comes first.</p>
+    <p>The same habit carried into crypto and code. Web3 is a market that ships software, so reading it and building on it feel like one skill. Data annotation work sharpened how I think about quality, edge cases and the systems that learn from them.</p>
+    <div class="facts"><span class="tag">Funded trader</span><span class="tag">NQ futures</span><span class="tag">Web3</span><span class="tag">Data annotation</span><span class="tag">GitHub</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="do">
+ <div class="wrap">
+  <div class="hd rv"><span class="mono"><b>02</b> &nbsp;What I do</span></div>
+  <div class="cards">
+   <article class="card rv">
+    <div class="viz"><svg viewBox="0 0 300 150" aria-hidden="true">
+     <g stroke-linecap="round"><path class="cn u" d="M20 90v-40M20 80v10" /><rect class="cn u" x="14" y="62" width="12" height="22" fill="none"/>
+     <path class="cn" d="M62 40v70"/><rect class="cn" x="56" y="55" width="12" height="40" fill="var(--bg)"/>
+     <path class="cn u" d="M104 30v80"/><rect class="cn u" x="98" y="45" width="12" height="46" fill="none"/>
+     <path class="cn" d="M146 50v80"/><rect class="cn" x="140" y="70" width="12" height="40" fill="var(--bg)"/>
+     <path class="cn u" d="M188 20v70"/><rect class="cn u" x="182" y="32" width="12" height="44" fill="none"/>
+     <path class="cn u" d="M230 14v60"/><rect class="cn u" x="224" y="24" width="12" height="32" fill="none"/>
+     <path class="cn" d="M272 20v60"/><rect class="cn" x="266" y="34" width="12" height="28" fill="var(--bg)"/></g></svg></div>
+    <span class="mono">Futures</span>
+    <h3>Trading</h3>
+    <p>Three to four years trading NASDAQ (NQ) futures, now on a funded account. My process is built on market structure, liquidity, technical analysis and strict risk management.</p>
+    <div class="tags"><span class="tag">NASDAQ NQ</span><span class="tag">Funded</span><span class="tag">Risk</span></div>
+   </article>
+   <article class="card rv" style="--d:.12s">
+    <div class="viz"><svg viewBox="0 0 300 150" aria-hidden="true">
+     <path class="ed" d="M40 110L110 40M110 40L190 90M190 90L260 35M110 40L150 130M190 90L150 130M40 110L150 130"/>
+     <circle class="nd f" cx="40" cy="110" r="7"/><circle class="nd" cx="110" cy="40" r="10"/><circle class="nd f" cx="190" cy="90" r="8"/><circle class="nd" cx="260" cy="35" r="6"/><circle class="nd" cx="150" cy="130" r="7"/></svg></div>
+    <span class="mono">Decentralised</span>
+    <h3>Web3 &amp; Crypto</h3>
+    <p>An active participant in crypto ecosystems. I follow blockchain technology, decentralised applications and the emerging protocols worth paying attention to, and look for where real opportunity forms.</p>
+    <div class="tags"><span class="tag">Blockchain</span><span class="tag">dApps</span><span class="tag">Ecosystems</span></div>
+   </article>
+   <article class="card rv" style="--d:.24s">
+    <div class="viz"><div class="code"><span class="c">// ideas, tested in public</span>
+<span class="k">const</span> idea = <span class="k">await</span> explore();
+<span class="k">if</span> (idea.holdsUp) ship(idea);
+<span class="c">// annotate, evaluate, refine</span>
+git push origin main</div></div>
+    <span class="mono">Software</span>
+    <h3>Building &amp; Technology</h3>
+    <p>Programming, experiments and digital products. Hands-on experience in data annotation, and a GitHub account where the things I build will live.</p>
+    <div class="tags"><span class="tag">Programming</span><span class="tag">Data annotation</span><span class="tag">GitHub</span></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="lab">
+ <div class="wrap">
+  <div class="hd rv"><span class="mono"><b>03</b> &nbsp;Digital Lab</span></div>
+  <div class="lab" id="grid">
+   <article class="pj rv">
+    <div class="th"><span class="mono st">Planned</span><svg viewBox="0 0 320 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 150L50 130 90 140 140 90 190 110 240 55 320 30" fill="none" stroke="#3dff8a" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="pb"><span class="mono">Trading</span><h3>Trading Journal</h3><p>A journal that connects to trading accounts and turns trade history into clear, reviewable performance.</p>
+     <div class="tags"><span class="tag">Futures</span><span class="tag">Analytics</span><span class="tag">Web</span></div>
+     <div class="pa"><a class="btn" href="https://github.com/ezenwa2003" target="_blank" rel="noopener">GitHub</a><a class="btn" href="#contact" aria-disabled="true" tabindex="-1">View project</a></div></div>
+   </article>
+   <article class="pj rv" style="--d:.12s">
+    <div class="th"><span class="mono st">Planned</span><svg viewBox="0 0 320 200" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#3dff8a" stroke-width="1.2" vector-effect="non-scaling-stroke"><circle cx="160" cy="100" r="30" vector-effect="non-scaling-stroke"/><circle cx="160" cy="100" r="60" opacity=".5" vector-effect="non-scaling-stroke"/><circle cx="160" cy="100" r="90" opacity=".25" vector-effect="non-scaling-stroke"/></g></svg></div>
+    <div class="pb"><span class="mono">Web3</span><h3>On-chain Experiment</h3><p>A small decentralised application built to learn a protocol properly and share what works.</p>
+     <div class="tags"><span class="tag">Blockchain</span><span class="tag">Smart contracts</span></div>
+     <div class="pa"><a class="btn" href="https://github.com/ezenwa2003" target="_blank" rel="noopener">GitHub</a><a class="btn" href="#contact" aria-disabled="true" tabindex="-1">View project</a></div></div>
+   </article>
+   <article class="pj rv" style="--d:.24s">
+    <div class="th"><span class="mono st">Planned</span><svg viewBox="0 0 320 200" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#3dff8a" stroke-width="1.2" vector-effect="non-scaling-stroke"><path d="M60 60h80v40h60v50h60" vector-effect="non-scaling-stroke"/><rect x="40" y="48" width="24" height="24" vector-effect="non-scaling-stroke"/><rect x="256" y="138" width="24" height="24" vector-effect="non-scaling-stroke"/></g></svg></div>
+    <div class="pb"><span class="mono">Automation</span><h3>Workflow Lab</h3><p>Automations and tools that remove repetitive work, from data handling to market research.</p>
+     <div class="tags"><span class="tag">Python</span><span class="tag">AI</span><span class="tag">Tooling</span></div>
+     <div class="pa"><a class="btn" href="https://github.com/ezenwa2003" target="_blank" rel="noopener">GitHub</a><a class="btn" href="#contact" aria-disabled="true" tabindex="-1">View project</a></div></div>
+   </article>
+  </div>
+  <p class="note rv">Nothing here is published yet. These slots are reserved for what I build next, and each will link to its repository once it ships.</p>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <span class="mono rv"><b>04</b> &nbsp;Contact</span>
+  <h2 class="rv">Let’s build <em>something</em>.</h2>
+  <a class="mail rv" href="mailto:anayoezenwa16@gmail.com">anayoezenwa16@gmail.com</a>
+  <div class="cta c rv"><a class="btn p" href="mailto:anayoezenwa16@gmail.com">Send an email</a><a class="btn" href="https://github.com/ezenwa2003" target="_blank" rel="noopener">github.com/ezenwa2003</a></div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span class="mono">© <span id="yr">2026</span> Ezenwa Alphonsus Anayo</span><a class="mono" href="#top">Back to top</a></div></footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.getElementById('yr').textContent=new Date().getFullYear();
+setTimeout(function(){document.body.classList.add('ready')},rm?0:1500);
+setTimeout(function(){var l=document.getElementById('ld');if(l)l.style.display='none'},rm?50:2700);
+/* reveal + active nav */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv,.hd').forEach(function(el){io.observe(el)});
+var links=document.querySelectorAll('nav a');
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('main section[id]').forEach(function(s){so.observe(s)});
+/* mobile menu */
+var nav=document.getElementById('nav'),mb=document.querySelector('.mbtn');
+function tog(o){nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'}
+mb.addEventListener('click',function(){tog(!nav.classList.contains('open'))});
+links.forEach(function(a){a.addEventListener('click',function(){tog(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')tog(false)});
+/* card spotlight */
+document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+/* cursor (fine pointers only) */
+if(!rm&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+ var cu=document.querySelector('.cur'),x=0,y=0,tx=0,ty=0;
+ addEventListener('pointermove',function(e){tx=e.clientX;ty=e.clientY;cu.classList.add('on')});
+ document.addEventListener('pointerover',function(e){cu.classList.toggle('h',!!e.target.closest('a,button,.card,.pj'))});
+ (function f(){x+=(tx-x)*.18;y+=(ty-y)*.18;cu.style.transform='translate('+x+'px,'+y+'px)';requestAnimationFrame(f)})();
+}
+/* hero: live price line */
+var cv=document.getElementById('cv'),cx=cv.getContext('2d'),W,H,pts=[],vis=true,step=6;
+function size(){var d=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);var n=Math.ceil(W/step)+2,v=pts.length?pts[pts.length-1]:H*.45;pts=[];for(var i=0;i<n;i++){v+=(Math.random()-.5)*14;v=Math.max(H*.2,Math.min(H*.7,v));pts.push(v)}}
+function draw(t){
+ cx.clearRect(0,0,W,H);
+ cx.strokeStyle='rgba(255,255,255,.045)';cx.lineWidth=1;
+ for(var gx=0;gx<W;gx+=80){cx.beginPath();cx.moveTo(gx,0);cx.lineTo(gx,H);cx.stroke()}
+ for(var gy=0;gy<H;gy+=80){cx.beginPath();cx.moveTo(0,gy);cx.lineTo(W,gy);cx.stroke()}
+ var g=cx.createLinearGradient(0,0,W,0);g.addColorStop(0,'rgba(61,255,138,0)');g.addColorStop(1,'rgba(61,255,138,.9)');
+ cx.strokeStyle=g;cx.lineWidth=1.5;cx.beginPath();
+ for(var i=0;i<pts.length;i++){var px=i*step,py=pts[i];i?cx.lineTo(px,py):cx.moveTo(px,py)}
+ cx.stroke();
+ var lx=(pts.length-1)*step,ly=pts[pts.length-1],p=(Math.sin(t/400)+1)/2;
+ cx.fillStyle='#3dff8a';cx.beginPath();cx.arc(lx,ly,3,0,7);cx.fill();
+ cx.strokeStyle='rgba(61,255,138,'+(.4-.3*p)+')';cx.beginPath();cx.arc(lx,ly,6+p*10,0,7);cx.stroke();
+}
+var last=0;
+function loop(t){
+ if(vis&&t-last>70){last=t;var v=pts[pts.length-1]+(Math.random()-.5)*16;v=Math.max(H*.2,Math.min(H*.7,v));pts.push(v);pts.shift()}
+ if(vis)draw(t);
+ requestAnimationFrame(loop);
+}
+size();addEventListener('resize',size);
+new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(cv);
+if(rm){draw(0)}else{requestAnimationFrame(loop)}
+})();
+</script>
+</body>
+</html>
