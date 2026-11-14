@@ -5,8 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ezenwa Alphonsus Anayo | Markets. Technology. Possibilities.</title>
 <meta name="description" content="Ezenwa is a futures trader, Web3 enthusiast and builder working at the intersection of financial markets and emerging technology.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.goatcounter.com; connect-src 'self' https://*.goatcounter.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#08090a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308090a'/%3E%3Cpath d='M9 8h14v3H12.5v4H21v3h-8.5v4H23v3H9z' fill='%233dff8a'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://ezenwa2003.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ezenwa Alphonsus Anayo">
+<meta property="og:title" content="Ezenwa Alphonsus Anayo | Markets. Technology. Possibilities.">
+<meta property="og:description" content="Futures trader, Web3 enthusiast and builder exploring the intersection of financial markets and emerging technology.">
+<meta property="og:url" content="https://ezenwa2003.github.io/">
+<meta property="og:image" content="https://ezenwa2003.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ezenwa Alphonsus Anayo. Markets. Technology. Possibilities. A green price line on a dark grid.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ezenwa Alphonsus Anayo | Markets. Technology. Possibilities.">
+<meta name="twitter:description" content="Futures trader, Web3 enthusiast and builder exploring financial markets and emerging technology.">
+<meta name="twitter:image" content="https://ezenwa2003.github.io/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -95,7 +112,7 @@ section{padding:clamp(5rem,12vw,10rem) 0;position:relative}
 .card:hover .nd{stroke:var(--acc)}.card:hover .nd.f{fill:var(--acc)}.card:hover .ed{stroke:var(--acc);animation:dash 1.5s linear infinite}
 @keyframes dash{to{stroke-dashoffset:-14}}
 .code{font:400 .8rem/1.9 var(--mono);color:var(--mute);white-space:pre;overflow:hidden}
-.code .k{color:var(--acc)}.code .c{color:#5b6065}
+.code .k{color:var(--acc)}.code .c{color:var(--mute)}
 /* lab */
 .lab{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .pj{border:1px solid var(--line);background:var(--bg2);border-radius:2px;display:flex;flex-direction:column;transition:border-color .5s,transform .6s var(--ease)}
@@ -120,6 +137,13 @@ section{padding:clamp(5rem,12vw,10rem) 0;position:relative}
 .cta.c{justify-content:center}
 footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer a{display:inline-block;padding:.6rem 0}
+#cc{position:fixed;left:1rem;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:90;max-width:36rem;margin-inline:auto;background:var(--bg2);border:1px solid var(--line);border-radius:2px;padding:1.1rem 1.3rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+#cc[hidden]{display:none}
+#cc p{flex:1 1 15rem;font-size:.9rem;color:#c4c6c8}
+#cc p a{text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px}
+#cc .btn{min-height:44px;padding:0 1.2rem;cursor:pointer;background:none;color:var(--ink)}
+#cc .btn.p{background:var(--acc);color:#04100a}
 /* cursor */
 .cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid var(--acc);border-radius:50%;z-index:80;pointer-events:none;opacity:0;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .3s,opacity .3s}
 .cur.on{opacity:.9}.cur.h{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(61,255,138,.1)}
@@ -141,6 +165,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 <body>
 <div id="ld" aria-hidden="true"><div><span>Ezenwa</span><i></i></div></div>
 <div class="cur" aria-hidden="true"></div>
+<div id="cc" role="dialog" aria-label="Analytics consent" hidden><p>I would like to use privacy-friendly analytics, without cookies, to see which pages are read. <a href="/privacy.html">Privacy policy</a></p><button class="btn" id="cc-n" type="button">Decline</button><button class="btn p" id="cc-y" type="button">Accept</button></div>
 
 <header>
  <div class="wrap">
@@ -254,18 +279,26 @@ git push origin main</div></div>
  <div class="wrap">
   <span class="mono rv"><b>04</b> &nbsp;Contact</span>
   <h2 class="rv">Let’s build <em>something</em>.</h2>
-  <a class="mail rv" href="mailto:anayoezenwa16@gmail.com">anayoezenwa16@gmail.com</a>
-  <div class="cta c rv"><a class="btn p" href="mailto:anayoezenwa16@gmail.com">Send an email</a><a class="btn" href="https://github.com/ezenwa2003" target="_blank" rel="noopener">github.com/ezenwa2003</a></div>
+  <a class="mail rv" href="#contact" data-u="anayoezenwa16" data-d="gmail.com">anayoezenwa16 [at] gmail [dot] com</a>
+  <div class="cta c rv"><a class="btn p" href="#contact" data-u="anayoezenwa16" data-d="gmail.com">Send an email</a><a class="btn" href="https://github.com/ezenwa2003" target="_blank" rel="noopener">github.com/ezenwa2003</a></div>
  </div>
 </section>
 </main>
 
-<footer><div class="wrap"><span class="mono">© <span id="yr">2026</span> Ezenwa Alphonsus Anayo</span><a class="mono" href="#top">Back to top</a></div></footer>
+<footer><div class="wrap"><span class="mono">© <span id="yr">2026</span> Ezenwa Alphonsus Anayo</span><span class="mono"><a href="/privacy.html">Privacy</a> &nbsp; <a href="/terms.html">Terms</a> &nbsp; <a href="#top">Back to top</a></span></div></footer>
 
+<script src="/site-config.js"></script>
 <script>
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('[data-u]').forEach(function(a){var m=a.dataset.u+'@'+a.dataset.d;a.href='mailto:'+m;if(a.classList.contains('mail'))a.textContent=m});
+/* analytics: loads only if a site code is set AND the visitor accepts */
+var code=(window.SITE||{}).analyticsCode,bn=document.getElementById('cc');
+function load(){var t=document.createElement('script');t.async=true;t.src='https://gc.zgo.at/count.js';t.setAttribute('data-goatcounter','https://'+code+'.goatcounter.com/count');document.head.appendChild(t)}
+function ch(v){try{localStorage.setItem('cc',v)}catch(e){}bn.hidden=true;if(v==='y')load()}
+if(code){var c=null;try{c=localStorage.getItem('cc')}catch(e){}if(c==='y')load();else if(c!=='n')bn.hidden=false}
+document.getElementById('cc-y').onclick=function(){ch('y')};document.getElementById('cc-n').onclick=function(){ch('n')};
 setTimeout(function(){document.body.classList.add('ready')},rm?0:1500);
 setTimeout(function(){var l=document.getElementById('ld');if(l)l.style.display='none'},rm?50:2700);
 /* reveal + active nav */
